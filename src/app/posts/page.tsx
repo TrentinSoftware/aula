@@ -21,12 +21,13 @@ export default async function PostsPage() {
 
     return(
         <div>
-            <h1>Todos os posts</h1>
+            <h1 className="text-center mt-5 nb-2 font-bold text-3x1">Todos os posts</h1>
 
-            <div>
+            <div className="flex flex-col gap-4 mx-2">
                 {data.posts.map(post => (
-                   <div key={post.id}>
-                    <h2>{post.title}</h2>
+                   <div key={post.id} className="bg-gray-200 p-4 rounded-md">
+                    <h2 className="font-bold">{post.title}</h2>
+                    <p>{post.body}</p>
                    </div>
                 ))}
             </div>
