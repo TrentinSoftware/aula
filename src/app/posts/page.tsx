@@ -1,4 +1,5 @@
 import { title } from "process";
+import { ButtonsChange } from "../../components/button";
 
 interface PostProps{
     id: number;
@@ -22,6 +23,8 @@ export default async function PostsPage() {
     return(
         <div>
             <h1 className="text-center mt-5 nb-2 font-bold text-3x1">Todos os posts</h1>
+
+            <ButtonsChange></ButtonsChange>
 
             <div className="flex flex-col gap-4 mx-2">
                 {data.posts.map(post => (
